@@ -1,1 +1,22 @@
-# popsicle-showdown-
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.studiopantisniff.popsicle_showdown">
+    <uses-feature android:glEsVersion="0x00020000"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <supports-screens android:largeScreens="true" android:resizeable="true"/>
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:name="com.studiopantisniff.popsicle_showdown.RunnerApplication">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.studiopantisniff.popsicle_showdown.RunnerActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="tv.ouya.intent.category.GAME"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/menu_settings" android:name="com.studiopantisniff.popsicle_showdown.RunnerPreferenceActivity"/>
+        <service android:name="RunnerBillingService"/>
+        <meta-data android:name="xperiaplayoptimized_content" android:resource="@string/xperiaplayoptimized_content"/>
+        <meta-data android:name="game_display_name" android:resource="@string/app_name"/>
+        <meta-data android:name="game_icon" android:resource="@drawable/icon"/>
+        <meta-data android:name="YYUse24Bit" android:value="1"/>
+        <meta-data android:name="YYAmazonGameCircle" android:value="0"/>
+    </application>
+</manifest>
